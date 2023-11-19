@@ -5,24 +5,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SamsClubDemo {
-
+public class KahootDemo {
     public static void main(String[] args) throws InterruptedException {
-
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.samsclub.com/");
+        driver.get("https://create.kahoot.it/auth/login");
         driver.manage().window().maximize();
-        WebElement signIn = driver.findElement(By.xpath("//*[@id=\"flyout-wrapper\"]/div/div[2]/div[1]/div/span"));
-        signIn.click();
-
+        WebElement emailAddress = driver.findElement(By.name("username"));
         Thread.sleep(5000);
-        WebElement emailAddress = driver.findElement(By.name("email"));
         emailAddress.sendKeys("tapansarker1122@yahoo.com");
-        Thread.sleep(5000);
         WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys("123456");
-        WebElement signIns = driver.findElement(By.xpath("/html/body"));
-        signIns.click();
+        Thread.sleep(5000);
+        password.sendKeys("123456789");
+        WebElement logIn = driver.findElement(By.id("login-submit-btn"));
+        Thread.sleep(5000);
+        logIn.click();
+
+
+
+
+
+
+
+
+
+
 
 
 

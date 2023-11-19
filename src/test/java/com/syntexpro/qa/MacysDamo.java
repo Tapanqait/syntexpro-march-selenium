@@ -15,7 +15,7 @@ public class MacysDamo {
         driver.get("https://www.macys.com/account/signin");
         driver.manage().window().maximize();
 
-        WebElement emailAddress= driver.findElement(By.name("user.email_address"));
+        WebElement emailAddress = driver.findElement(By.name("user.email_address"));
          Thread.sleep(5000);
              emailAddress.sendKeys("tapansarker1122@yahoo.com");
          WebElement password = driver.findElement(By.id("pw-input"));
